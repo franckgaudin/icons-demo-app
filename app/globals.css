@@ -53,6 +53,8 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --tags: 198, 100%, 92%, 1;
+    --tags-foreground: 198, 100%, 35%, 1;
   }
   .dark {
     --background: 0 0% 3.9%;
