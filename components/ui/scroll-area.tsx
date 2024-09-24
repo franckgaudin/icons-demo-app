@@ -23,9 +23,16 @@ const ScrollArea = React.forwardRef<
 ))
 ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 
+interface ScrollBarProps {
+  orientation?: "vertical" | "horizontal"
+}
+
 const ScrollBar = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
-  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
+  React.ComponentPropsWithoutRef<
+    typeof ScrollAreaPrimitive.ScrollAreaScrollbar
+  > &
+    ScrollBarProps
 >(({ className, orientation = "vertical", ...props }, ref) => (
   <ScrollAreaPrimitive.ScrollAreaScrollbar
     ref={ref}
